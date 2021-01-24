@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #669966;
+  --primary-color-dark: #356060;
+  --gray-lightest: #f4f4f4;
+  --gray-light: #939393;
+  --gray-base: #292929;
+  --gray-darkest: black;
+  --font-xs: 0.9rem;
+  --font-sm: 1.2rem;
+  --font-base: 1.6rem;
+  --space-xs: 0.3rem;
+  --space-sm: 0.5rem;
+  --space-base: 1rem;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-gray-lightest {
+  background-color: var(--gray-lightest);
+}
+
+.text-xs {
+  font-size: var(--font-xs);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.rounded {
+  border-radius: 15px;
+}
+
+.rounded-t {
+  border-radius: 15px 15px 0 0;
+}
+
+.rounded-b {
+  border-radius: 0 0 15px 15px;
+}
+
+.mt-xs {
+  margin-top: var(--space-xs);
+}
+
+.mt-sm {
+  margin-top: var(--space-sm);
+}
+
+.p-base {
+  padding: var(--space-base);
+}
+
+.gray-light {
+  color: var(--gray-light);
+}
+
+.gray-lightest {
+  color: var(--gray-lightest);
+}
+
+.gray-base {
+  color: var(--gray-base);
+}
+
+.primary-dark {
+  color: var(--primary-color-dark);
+}
+
+.cap::first-letter {
+  text-transform: capitalize;
+}
+
+.card {
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Futura LT';
+  font-size: var(--font-base);
+  text-align: center;
+  color: var(--gray-darkest);
+  background-image: url('_dark-honeycomb.png');
+}
+
+.card-image {
+  max-width: 450px;
+}
+
+.card-image img {
+  width: 100%;
+}
+
+.card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.replay-button svg circle {
+  fill: var(--primary-color);
+}
+
+.replay-button svg path {
+  fill: var(--gray-darkest);
+}
+
+.hint {
+  color: var(--gray-light);
+}
+
+.extra-info {
+  font-size: var(--font-xs);
+  margin-top: var(--space-xs);
+  color: var(--gray-light);
+}
+
+.alt-words {
+  font-size: var(--font-sm);
+  color: var(--gray-base);
+}
