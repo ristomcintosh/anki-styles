@@ -78,7 +78,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Futura LT';
   font-size: var(--font-base);
   text-align: center;
   color: var(--gray-darkest);
