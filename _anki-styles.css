@@ -2,79 +2,20 @@
   --primary-color: #669966;
   --primary-color-dark: #356060;
   --gray-lightest: #f4f4f4;
-  --gray-light: #939393;
-  --gray-base: #292929;
+  --gray-light: #3d3d3d;
+  --gray-base: #191919;
   --gray-darkest: black;
-  --font-xs: 0.9rem;
-  --font-sm: 1.2rem;
-  --font-base: 1.6rem;
+  --font-xs: 1.3rem;
+  --font-sm: 1.8rem;
+  --font-base: 2rem;
   --space-xs: 0.3rem;
   --space-sm: 0.5rem;
   --space-base: 1rem;
 }
 
-.bg-primary {
-  background-color: var(--primary-color);
-}
-
-.bg-gray-lightest {
-  background-color: var(--gray-lightest);
-}
-
-.text-xs {
-  font-size: var(--font-xs);
-}
-
-.w-full {
-  width: 100%;
-}
-
-.rounded {
-  border-radius: 15px;
-}
-
-.rounded-t {
-  border-radius: 15px 15px 0 0;
-}
-
-.rounded-b {
-  border-radius: 0 0 15px 15px;
-}
-
-.mt-xs {
-  margin-top: var(--space-xs);
-}
-
-.mt-sm {
-  margin-top: var(--space-sm);
-}
-
-.p-base {
-  padding: var(--space-base);
-}
-
-.gray-light {
-  color: var(--gray-light);
-}
-
-.gray-lightest {
-  color: var(--gray-lightest);
-}
-
-.gray-base {
-  color: var(--gray-base);
-}
-
-.primary-dark {
-  color: var(--primary-color-dark);
-}
-
-.cap::first-letter {
-  text-transform: capitalize;
-}
+/* ====== Card Styles ====== */
 
 .card {
-  min-height: calc(100vh - 6rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,22 +23,21 @@
   text-align: center;
   color: var(--gray-darkest);
   background-image: url('_dark-honeycomb.png');
+  padding: 0 var(--space-base);
+}
+
+.content-container {
+  border: solid var(--gray-darkest) 3px;
 }
 
 .card-image {
-  max-width: 450px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .card-image img {
-  width: 100%;
-}
-
-.card-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  max-width: 100%;
+  border: solid var(--gray-base) 3px;
 }
 
 .replay-button svg circle {
@@ -121,4 +61,142 @@
 .alt-words {
   font-size: var(--font-sm);
   color: var(--gray-base);
+}
+
+/* ====== Utility Classes ====== */
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-gray-lightest {
+  background-color: var(--gray-lightest);
+}
+
+.text-xs {
+  font-size: var(--font-xs);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-max {
+  width: 200px;
+}
+
+.rounded {
+  border-radius: 15px;
+}
+
+.rounded-t {
+  border-radius: 15px 15px 0 0;
+}
+
+.rounded-b {
+  border-radius: 0 0 15px 15px;
+}
+
+.mt-xs {
+  margin-top: var(--space-xs);
+}
+
+.mt-sm {
+  margin-top: var(--space-sm);
+}
+
+.mt-base {
+  margin-top: var(--space-base);
+}
+
+.p-base {
+  padding: var(--space-base);
+}
+
+.ph-lg {
+  padding-left: calc(var(--space-base) * 2);
+  padding-right: calc(var(--space-base) * 2);
+}
+
+.pl-lg {
+  padding-left: calc(var(--space-base) * 2);
+}
+
+.pr-lg {
+  padding-right: calc(var(--space-base) * 2);
+}
+
+.pt-lg {
+  padding-top: calc(var(--space-base) * 2);
+}
+
+.pb-lg {
+  padding-bottom: calc(var(--space-base) * 2);
+}
+
+.pv-xlg {
+  padding-top: calc(var(--space-base) * 4);
+  padding-bottom: calc(var(--space-base) * 4);
+}
+
+.pt-xlg {
+  padding-top: calc(var(--space-base) * 4);
+}
+
+.pb-xlg {
+  padding-bottom: calc(var(--space-base) * 4);
+}
+
+.pl-xlg {
+  padding-left: calc(var(--space-base) * 4);
+}
+
+.pr-xlg {
+  padding-right: calc(var(--space-base) * 4);
+}
+
+.gray-light {
+  color: var(--gray-light);
+}
+
+.gray-lightest {
+  color: var(--gray-lightest);
+}
+
+.gray-base {
+  color: var(--gray-base);
+}
+
+.primary-dark {
+  color: var(--primary-color-dark);
+}
+
+.cap::first-letter {
+  text-transform: capitalize;
+}
+
+.overflow-hidden {
+  overflow: hidden; /* Clips the child element to the parent's rounded corners */
+}
+
+.debug {
+  border: solid red 2px;
+}
+
+/* ====== Reset ====== */
+
+html,
+body {
+  height: 100%; /* Ensure the full height of the page is used */
+  margin: 0; /* Remove default margin */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
